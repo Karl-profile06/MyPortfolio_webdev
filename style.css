@@ -191,7 +191,7 @@
     section ul li:hover,
     section ul li:focus {
       background-color: #4aa3ff;
-      color: #e0f0ff;
+     color: #161718;
       transform: translateX(8px) scale(1.04);
       box-shadow: 0 10px 20px rgba(74, 163, 255, 0.85);
       outline: none;
