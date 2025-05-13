@@ -191,7 +191,7 @@
     section ul li:hover,
     section ul li:focus {
       background-color: #4aa3ff;
-     color: #161718;
+      color: #161718;
       transform: translateX(8px) scale(1.04);
       box-shadow: 0 10px 20px rgba(74, 163, 255, 0.85);
       outline: none;
@@ -293,3 +293,80 @@
         min-width: initial;
       }
     }
+
+    /* Competitive Programming Optimized styles */
+    @media (max-width: 600px) {
+      body {
+        padding-bottom: 20px;
+        background: #0a1a2b;
+      }
+      main.container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 8px;
+        padding: 20px 15px 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(74, 163, 255, 0.4);
+      }
+      nav.navbar ul {
+        justify-content: space-around;
+        padding: 10px 0;
+      }
+      nav.navbar li {
+        margin: 6px 8px;
+        font-size: 0.9rem;
+      }
+      nav.navbar a {
+        padding: 8px 10px;
+      }
+      #profile img {
+        width: 100px;
+        height: 100px;
+        border-width: 3px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px #4aa3ffaa;
+      }
+      #profile h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+      #profile p {
+        font-size: 1rem;
+        max-width: 100%;
+        margin: 8px auto;
+        line-height: 1.5;
+      }
+      #profile .details {
+        font-size: 0.95rem;
+        padding: 15px 18px;
+        margin-top: 25px;
+        max-width: 100%;
+      }
+      section {
+        margin-top: 40px;
+        padding: 15px 18px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(41, 69, 115, 0.6);
+      }
+      section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+      section ul li {
+        font-size: 0.9rem;
+        padding: 12px 18px;
+        margin: 10px 0;
+        border-radius: 10px;
+      }
+      #contacts p, #contacts a {
+        font-size: 0.95rem;
+      }
+      #contacts .contact-item {
+        margin: 10px 0;
+        gap: 8px;
+      }
+      #contacts .contact-item i {
+        font-size: 1.1rem;
+      }
+    }
+
