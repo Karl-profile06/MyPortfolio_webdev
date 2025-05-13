@@ -260,41 +260,7 @@
       background: transparent;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      main.container {
-        padding: 30px 20px 50px;
-        margin: 20px 12px;
-      }
-      nav.navbar ul {
-        flex-wrap: wrap;
-      }
-      nav.navbar li {
-        margin: 10px 16px;
-        font-size: 1rem;
-      }
-      #profile img {
-        width: 130px;
-        height: 130px;
-      }
-      section h2 {
-        font-size: 1.6rem;
-      }
-      section ul li {
-        font-size: 1rem;
-      }
-      #contacts .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-      }
-      #contacts .contact-item i {
-        font-size: 1.2rem;
-        min-width: initial;
-      }
-    }
-
-    /* Competitive Programming Optimized styles */
+    /* Responsive adjustments for mobile devices */
     @media (max-width: 600px) {
       body {
         padding-bottom: 20px;
