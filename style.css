@@ -272,78 +272,115 @@ nav.navbar a:hover {
 
     /* Responsive adjustments for mobile devices */
     @media (max-width: 600px) {
-      body {
-        padding-bottom: 20px;
-        background: #0a1a2b;
-      }
-      main.container {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 8px;
-        padding: 20px 15px 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(74, 163, 255, 0.4);
-      }
-      nav.navbar ul {
-        justify-content: space-around;
-        padding: 10px 0;
-      }
-      nav.navbar li {
-        margin: 6px 8px;
-        font-size: 0.9rem;
-      }
-      nav.navbar a {
-        padding: 8px 10px;
-      }
-      #profile img {
-        width: 100px;
-        height: 160px;
-        border-width: 3px;
-        margin-bottom: 20px;
-        box-shadow: 0 0 20px #4aa3ffaa;
-      }
-      #profile h2 {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
-      }
-      #profile p {
-        font-size: 1rem;
-        max-width: 100%;
-        margin: 8px auto;
-        line-height: 1.5;
-      }
-      #profile .details {
-        font-size: 0.95rem;
-        padding: 15px 18px;
-        margin-top: 25px;
-        max-width: 100%;
-      }
-      section {
-        margin-top: 40px;
-        padding: 15px 18px;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(41, 69, 115, 0.6);
-      }
-      section h2 {
-        font-size: 1.4rem;
-        margin-bottom: 20px;
-      }
-      section ul li {
-        font-size: 0.9rem;
-        padding: 12px 18px;
-        margin: 10px 0;
-        border-radius: 10px;
-      }
-      #contacts p, #contacts a {
-        font-size: 0.95rem;
-      }
-      #contacts .contact-item {
-        margin: 10px 0;
-        gap: 8px;
-      }
-      #contacts .contact-item i {
-        font-size: 1.1rem;
-      }
+  body {
+    margin: 0;
+    padding: 0 10px 20px;
+    background: #0a1a2b;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  main.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 20px 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(74, 163, 255, 0.4);
+    box-sizing: border-box;
+  }
+
+  nav.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  nav.navbar li {
+    margin: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  nav.navbar a {
+    padding: 8px 10px;
+    display: block;
+  }
+
+  #profile img {
+    width: 100px;
+    height: auto;
+    border-width: 3px;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 0 20px #4aa3ffaa;
+  }
+
+  #profile h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  #profile p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 8px auto;
+    text-align: center;
+  }
+
+  #profile .details {
+    font-size: 0.95rem;
+    padding: 15px 18px;
+    margin-top: 25px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  section {
+    margin-top: 40px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(41, 69, 115, 0.6);
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  section ul {
+    padding-left: 0;
+  }
+
+  section ul li {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+    margin: 10px 0;
+    border-radius: 10px;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  #contacts p,
+  #contacts a {
+    font-size: 0.95rem;
+    word-wrap: break-word;
+  }
+
+  #contacts .contact-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  #contacts .contact-item i {
+    font-size: 1.1rem;
+  }
     }
 
     /* Education Section Specific Styles */
