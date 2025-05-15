@@ -65,8 +65,14 @@ nav.navbar a {
 }
 
 /* Hover and active state */
-nav.navbar a:hover
 nav.navbar a:active {
+  color: #4aa3ff;
+  background: rgba(74, 163, 255, 0.15);
+  box-shadow: 0 0 10px #4aa3ffaa;
+  font-weight: 700;
+}
+
+nav.navbar a:hover{
   color: #4aa3ff;
   background: rgba(74, 163, 255, 0.15);
   box-shadow: 0 0 10px #4aa3ffaa;
