@@ -407,23 +407,22 @@ nav.navbar a:hover{
   align-items: center;
   text-align: center;
 }
-nav.navbar ul {
+  nav.navbar ul {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 8px 0;
-    gap: 6px;
+    padding: 10px 0;
+    gap: 8px;
   }
 
   nav.navbar li {
-    margin: 3px 4px;
-    font-size: 0.75rem; /* Smaller font for tight screens */
-  }
-
-  nav.navbar a {
-    padding: 5px 8px; /* Tighter padding */
+    margin: 3px 5px;
     font-size: 0.75rem;
   }
 
+  nav.navbar a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
     }
 
     /* Education Section Specific Styles */
