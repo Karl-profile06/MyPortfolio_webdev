@@ -408,6 +408,24 @@ nav.navbar a:hover{
   text-align: center;
 }
 
+       nav.navbar ul {
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 10px; /* Optional: cleaner spacing */
+}
+
+nav.navbar li {
+  margin: 4px 6px;
+  font-size: 0.85rem;
+}
+
+nav.navbar a {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+
     }
 
     /* Education Section Specific Styles */
