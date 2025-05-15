@@ -57,16 +57,22 @@ nav.navbar a {
   padding: 10px 14px;
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    font-weight 0.3s ease;
 }
 
-nav.navbar a.active,
-nav.navbar a:hover {
+/* Hover and active state */
+nav.navbar a:hover,
+nav.navbar a.active {
   color: #4aa3ff;
   background: rgba(74, 163, 255, 0.15);
   box-shadow: 0 0 10px #4aa3ffaa;
   font-weight: 700;
 }
+
 
     /* Container - all content */
     main.container {
