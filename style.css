@@ -302,25 +302,6 @@ nav.navbar a:hover{
     box-sizing: border-box;
   }
 
-  nav.navbar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px 0;
-    list-style: none;
-    margin: 0;
-  }
-
-  nav.navbar li {
-    margin: 6px 8px;
-    font-size: 0.9rem;
-  }
-
-  nav.navbar a {
-    padding: 8px 10px;
-    display: block;
-  }
-
   #profile img {
     width: 100px;
     height: auto;
