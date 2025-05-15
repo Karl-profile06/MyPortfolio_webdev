@@ -407,24 +407,22 @@ nav.navbar a:hover{
   align-items: center;
   text-align: center;
 }
+nav.navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 0;
+    gap: 6px;
+  }
 
-       nav.navbar ul {
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px 0;
-  gap: 10px; /* Optional: cleaner spacing */
-}
+  nav.navbar li {
+    margin: 3px 4px;
+    font-size: 0.75rem; /* Smaller font for tight screens */
+  }
 
-nav.navbar li {
-  margin: 4px 6px;
-  font-size: 0.85rem;
-}
-
-nav.navbar a {
-  padding: 6px 10px;
-  font-size: 0.85rem;
-}
-
+  nav.navbar a {
+    padding: 5px 8px; /* Tighter padding */
+    font-size: 0.75rem;
+  }
 
     }
 
@@ -447,7 +445,7 @@ nav.navbar a {
 }
 
 #trainings ul li {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Center items vertically */
-  gap: 15px; /* Space between logo and text */
+     display: flex; /* Use flexbox for horizontal alignment */
+     align-items: center; /* Center items vertically */
+     gap: 15px; /* Space between logo and text */
 }
