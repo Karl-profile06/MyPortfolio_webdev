@@ -1,0 +1,877 @@
+/* =======================
+   GENERAL STYLES
+======================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f4ede1;
+  color: #4a3a28;
+  line-height: 1.6;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+/* Base Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebe1cd;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  color: #5a4632;
+  margin: 0;
+}
+
+/* Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #5a4632;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #7a654a;
+}
+
+
+/* Navbar General */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebe1cd;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(80, 65, 35, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  font-size: 1.8rem;
+  color: #5a4632;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #5a4632;
+  font-size: 1rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #7a654a;
+  border-bottom-color: #7a654a;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ebe1cd;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar h2 {
+    font-size: 1.3rem;
+  }
+
+  .navbar ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hide the toggle checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger icon style */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #5a4632;
+  transition: all 0.3s ease;
+}
+
+/* Nav menu base style */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    background-color: #ebe1cd;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show menu when checkbox is checked */
+  .nav-toggle:checked + .hamburger + .nav-menu {
+    display: flex;
+  }
+
+  /* Animate hamburger into X */
+  .nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+
+/* =======================
+   INTRO SECTION
+======================= */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 5%;
+  background-color: #e6d2ac;
+  box-shadow: 0 4px 10px rgba(80, 65, 35, 0.15);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.intro-content {
+  flex: 1;
+  color: #5a4632;
+}
+
+.intro-content h1 {
+  font-size: 3.5rem;
+  font-family: 'Garamond', serif;
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  color: #6b5945;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 25px rgba(80, 65, 35, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   FADE-IN ANIMATION
+======================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-image {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .intro-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-content p {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* =======================
+   PROFILE SECTION
+======================= */
+#profile {
+  background-color: #f4ede1; /* match body background for subtle section */
+  padding: 4rem 5%;
+  border-top: 2px solid #d4c3a3;
+  border-bottom: 2px solid #d4c3a3;
+  color: #4a3a28;
+  font-family: Georgia, serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#profile .details {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+#profile h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #5a4632;
+  font-family: Garamond, serif;
+  font-weight: normal;
+  border-bottom: 2px solid #d4c3a3;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+#short-intro {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #6b5945;
+  margin-bottom: 2rem;
+}
+
+#personal-details p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+  color: #5a4632;
+}
+
+#personal-details strong {
+  color: #4a3a28;
+  font-weight: bold;
+}
+
+/* Accessibility: Focus outline for keyboard nav */
+#profile:focus {
+  outline: 3px dashed #c2b08b;
+  outline-offset: 10px;
+}
+
+/* =======================
+   Responsive Profile
+======================= */
+@media (max-width: 768px) {
+  #profile h2 {
+    font-size: 2rem;
+  }
+
+  #short-intro {
+    font-size: 1.2rem;
+  }
+
+  #personal-details p {
+    font-size: 1rem;
+  }
+}
+
+/* =======================
+   EDUCATION SECTION (FULL WIDTH)
+======================= */
+#education {
+  width: 100%;
+  background-color: #ebe1cd; /* warm parchment tone */
+  padding: 4rem 3%;
+  color: #4a3a28;
+  font-family: Georgia, serif;
+}
+
+#education h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #5a4632;
+  font-family: Garamond, serif;
+  border-bottom: 2px solid #d4c3a3;
+  padding-bottom: 0.5rem;
+}
+
+#education ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#education li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #f4ede1;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(80, 65, 35, 0.1);
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  border-left: 6px solid #c8b694;
+}
+
+/* Alternate layout for even entries */
+#education li:nth-child(even) {
+  flex-direction: row-reverse;
+  border-left: none;
+  border-right: 6px solid #c8b694;
+}
+
+.school-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(80, 65, 35, 0.2);
+  flex-shrink: 0;
+}
+
+#education li strong {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #5a4632;
+}
+
+#education li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #4a3a28;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #education h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #education li,
+  #education li:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: 3px solid #c8b694;
+  }
+
+  .school-logo {
+    margin-bottom: 1rem;
+  }
+}
+
+/* =======================
+   TRAININGS & PROGRAMS SECTION
+======================= */
+#trainings {
+  width: 100%;
+  background-color: #f4ede1; /* consistent warm cream tone */
+  padding: 4rem 3%;
+  color: #4a3a28;
+  font-family: Georgia, serif;
+}
+
+#trainings h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #5a4632;
+  font-family: Garamond, serif;
+  border-bottom: 2px solid #d4c3a3;
+  padding-bottom: 0.5rem;
+}
+
+#trainings ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Training Card */
+#trainings li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ebe1cd;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border-left: 6px solid #c8b694;
+  box-shadow: 0 4px 12px rgba(80, 65, 35, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+#trainings li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(80, 65, 35, 0.2);
+}
+
+#trainings .school-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(80, 65, 35, 0.15);
+  flex-shrink: 0;
+}
+
+/* Optional: Training description or organizer */
+.training-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.training-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #5a4632;
+}
+
+.training-org {
+  font-size: 1rem;
+  color: #6b5945;
+  font-style: italic;
+}
+
+.training-date {
+  font-size: 0.95rem;
+  color: #857252;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #trainings h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #trainings li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #trainings .school-logo {
+    margin-bottom: 1rem;
+  }
+
+  .training-details {
+    align-items: center;
+  }
+}
+
+/* =======================
+   PROJECTS SECTION
+======================= */
+#projects {
+  width: 100%;
+  background-color: #ebe1cd; /* light parchment tone */
+  padding: 4rem 3%;
+  font-family: Georgia, serif;
+  color: #4a3a28;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #5a4632;
+  font-family: Garamond, serif;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #d4c3a3;
+  padding-bottom: 0.5rem;
+}
+
+/* Project list */
+#projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#projects li {
+  background-color: #f4ede1;
+  padding: 1.8rem 2rem;
+  border-left: 6px solid #c8b694;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(80, 65, 35, 0.1);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Hover effect */
+#projects li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(80, 65, 35, 0.2);
+}
+
+/* Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #projects h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #projects li {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* =======================
+   JOB EXPERIENCE SECTION
+======================= */
+#job-experience {
+  width: 100%;
+  background-color: #f4ede1;
+  padding: 4rem 3%;
+  font-family: Georgia, serif;
+  color: #4a3a28;
+}
+
+#job-experience h2 {
+  font-size: 2.5rem;
+  color: #5a4632;
+  font-family: Garamond, serif;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #d4c3a3;
+  padding-bottom: 0.5rem;
+}
+
+#job-experience ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.job-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ebe1cd;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(80, 65, 35, 0.1);
+  gap: 2rem;
+  border-left: 6px solid #c8b694;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(80, 65, 35, 0.2);
+}
+
+.job-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(80, 65, 35, 0.15);
+  flex-shrink: 0;
+}
+
+.job-details {
+  flex: 1;
+}
+
+.job-details strong {
+  font-size: 1.3rem;
+  color: #5a4632;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.job-details p {
+  font-size: 1.1rem;
+  color: #6b5945;
+  line-height: 1.6;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .job-photo {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .job-details strong {
+    font-size: 1.2rem;
+  }
+
+  .job-details p {
+    font-size: 1rem;
+  }
+}
+
+/* =======================
+   CONTACTS SECTION
+======================= */
+#contacts {
+  width: 100%;
+  background-color: #ebe1cd;
+  padding: 4rem 3%;
+  font-family: Georgia, serif;
+  color: #4a3a28;
+}
+
+#contacts h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #5a4632;
+  font-family: Garamond, serif;
+  border-bottom: 2px solid #d4c3a3;
+  padding-bottom: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  background-color: #f4ede1;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid #c8b694;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(80, 65, 35, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(80, 65, 35, 0.2);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #7a654a;
+  flex-shrink: 0;
+}
+
+/* Make links match tone */
+.contact-item a {
+  text-decoration: none;
+  color: #4a3a28;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #7a654a;
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #contacts h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-item i {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Hover effect for all sections (boxes) */
+section {
+  padding: 40px;
+  margin: 20px 0;
+  background-color: #ebe1cd;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+section:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  background-color: #ebe1cd; /* Change background color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Hover effect for images */
+.intro-image img, .school-logo, .job-photo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On hover, enlarge the image and add shadow */
+.intro-image img:hover, .school-logo:hover, .job-photo:hover {
+  transform: scale(1.1); /* Slightly zoom in the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Style for navbar links */
+.navbar ul li a {
+  color: #7a654a;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1rem;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #7a654a; /* Change text color */
+  border-bottom-color: #7a654a; /* Underline the text */
+}
+
+/* Hover effect for sections */
+section.hovered {
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  background-color: #ebe1cd; /* Optional background color change */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
