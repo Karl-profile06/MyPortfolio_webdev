@@ -355,7 +355,6 @@ body {
   }
 }
 
-/* =======================    EDUCATION SECTION (FULL WIDTH) ======================= */
 #education {
   width: 100%;
   background-color: #ebe1cd; /* warm parchment tone */
@@ -397,8 +396,9 @@ body {
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
   border-left: 6px solid #c8b694;
-  margin-left: 10px;  /* Add margin to the left of each item */
-  margin-right: 10px; /* Add margin to the right of each item */
+  margin-left: 10px;  /* Margin to the left of each item */
+  margin-right: 10px; /* Margin to the right of each item */
+  width: auto; /* Allow item to not stretch full width */
 }
 
 /* Alternate layout for even entries */
@@ -415,7 +415,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(80, 65, 35, 0.2);
   flex-shrink: 0;
-  margin-left: 20px; /* Margin on the left of images */
+  margin-left: 0; /* Remove margin to make it left aligned */
+  margin-right: 10px; /* Margin for space between the image and text */
 }
 
 #education li strong {
@@ -456,7 +457,8 @@ body {
 
   .school-logo {
     margin-bottom: 1rem;
-    margin-left: 10px; /* Margin for smaller screens */
+    margin-left: 0; /* Remove margin for smaller screens */
+    margin-right: 10px; /* Margin for small spacing between image and text */
   }
 }
 
