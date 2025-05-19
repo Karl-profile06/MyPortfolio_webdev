@@ -775,12 +775,16 @@ body {
   }
 }
 
+/* Contacts Section */
 #contacts {
   width: 100%;
   background-color: #ebe1cd;
   padding: 4rem 3%;
   font-family: Georgia, serif;
   color: #4a3a28;
+  margin-left: 10px; /* Margin on the left */
+  margin-right: 10px; /* Margin on the right */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
 }
 
 #contacts h2 {
@@ -860,6 +864,7 @@ body {
     margin-bottom: 0.5rem;
   }
 }
+
 
 /* Hover effect for all sections (boxes) */
 section {
