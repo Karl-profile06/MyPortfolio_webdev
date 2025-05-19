@@ -238,6 +238,7 @@ body {
   height: auto;
   box-shadow: 0 10px 25px rgba(80, 65, 35, 0.1);
   transition: transform 0.5s ease;
+   border-radius: 50%;
 }
 
 .intro-image img:hover {
@@ -270,6 +271,7 @@ body {
   .intro-image {
     justify-content: center;
     margin-top: 2rem;
+     border-radius: 50%;
   }
 
   .intro-content h1 {
