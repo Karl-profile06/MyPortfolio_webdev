@@ -359,9 +359,12 @@ body {
 #education {
   width: 100%;
   background-color: #ebe1cd; /* warm parchment tone */
-  padding: 4rem 3%;
+  padding: 4rem 3%; /* Padding on top/bottom and sides */
   color: #4a3a28;
   font-family: Georgia, serif;
+  box-sizing: border-box; /* Make sure padding doesn't affect total width */
+  margin-left: 10px; /* Margin on the left */
+  margin-right: 10px; /* Margin on the right */
 }
 
 #education h2 {
@@ -394,6 +397,8 @@ body {
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
   border-left: 6px solid #c8b694;
+  margin-left: 10px;  /* Add margin to the left of each item */
+  margin-right: 10px; /* Add margin to the right of each item */
 }
 
 /* Alternate layout for even entries */
@@ -410,7 +415,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(80, 65, 35, 0.2);
   flex-shrink: 0;
-  margin-left: 20px; /* Margin on the left */
+  margin-left: 20px; /* Margin on the left of images */
 }
 
 #education li strong {
@@ -429,6 +434,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  #education {
+    padding: 3rem 3%; /* Keep padding for smaller screens, with margin still */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   #education h2 {
     font-size: 2rem;
     text-align: center;
@@ -448,6 +459,7 @@ body {
     margin-left: 10px; /* Margin for smaller screens */
   }
 }
+
 
 
 /* =======================
