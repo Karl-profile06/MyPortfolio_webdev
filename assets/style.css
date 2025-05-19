@@ -233,11 +233,12 @@ body {
   justify-content: flex-end;
   align-items: center; /* Vertically center the image */
   padding: 0;
-   margin-left: 50px;
+  margin-left: 50px; /* Maintain the left margin */
+  margin-right: 20px; /* Add a bit of right margin to move the image towards the center */
 }
 
 .intro-image img {
-  max-width: 50%; /* Adjusted to a smaller but not too small size */
+  max-width: 60%; /* Increase the size of the image */
   height: auto;
   border-radius: 50%; /* Keep the image circular */
   box-shadow: 0 10px 25px rgba(80, 65, 35, 0.1); /* Subtle shadow */
