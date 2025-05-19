@@ -355,9 +355,7 @@ body {
   }
 }
 
-/* =======================
-   EDUCATION SECTION (FULL WIDTH)
-======================= */
+/* =======================    EDUCATION SECTION (FULL WIDTH) ======================= */
 #education {
   width: 100%;
   background-color: #ebe1cd; /* warm parchment tone */
@@ -406,12 +404,13 @@ body {
 }
 
 .school-logo {
-  width: 90px;
-  height: 90px;
+  width: 70px; /* Reduce size of the image */
+  height: 70px; /* Maintain aspect ratio */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(80, 65, 35, 0.2);
   flex-shrink: 0;
+  margin-left: 20px; /* Margin on the left */
 }
 
 #education li strong {
@@ -446,8 +445,10 @@ body {
 
   .school-logo {
     margin-bottom: 1rem;
+    margin-left: 10px; /* Margin for smaller screens */
   }
 }
+
 
 /* =======================
    TRAININGS & PROGRAMS SECTION
