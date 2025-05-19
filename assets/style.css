@@ -232,11 +232,11 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center; /* Vertically center the image */
-  padding: 20px; /* Optional: add some padding around the image */
+  padding: 0;
 }
 
 .intro-image img {
-  max-width: 45%; /* Adjusted to a smaller but not too small size */
+  max-width: 50%; /* Adjusted to a smaller but not too small size */
   height: auto;
   border-radius: 50%; /* Keep the image circular */
   box-shadow: 0 10px 25px rgba(80, 65, 35, 0.1); /* Subtle shadow */
