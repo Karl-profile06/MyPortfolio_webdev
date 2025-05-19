@@ -236,7 +236,7 @@ body {
 }
 
 .intro-image img {
-  max-width: 50%; /* Limit the max width to make it smaller */
+  max-width: 45%; /* Adjusted to a smaller but not too small size */
   height: auto;
   border-radius: 50%; /* Keep the image circular */
   box-shadow: 0 10px 25px rgba(80, 65, 35, 0.1); /* Subtle shadow */
@@ -246,6 +246,7 @@ body {
   background-origin: border-box;
   background-clip: content-box; /* Keeps the border and the image separate */
 }
+
 
 
 .intro-image img:hover {
