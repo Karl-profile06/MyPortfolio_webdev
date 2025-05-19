@@ -839,11 +839,12 @@ body {
 /* Hover effect for all sections (boxes) */
 section {
   padding: 40px;
-  margin: 20px 0;
+  margin: 20px 5px; /* Adjusted for 5px margin on right and left */
   background-color: #ebe1cd;
   border-radius: 8px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 
 /* Hover effect */
 section:hover {
