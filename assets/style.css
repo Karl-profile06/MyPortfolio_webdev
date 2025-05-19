@@ -233,6 +233,7 @@ body {
   justify-content: flex-end;
   align-items: center; /* Vertically center the image */
   padding: 0;
+   margin-left: 50px;
 }
 
 .intro-image img {
