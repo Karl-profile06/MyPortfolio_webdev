@@ -586,7 +586,6 @@ body {
   }
 }
 
-
 /* =======================
    PROJECTS SECTION
 ======================= */
@@ -596,6 +595,9 @@ body {
   padding: 4rem 3%;
   font-family: Georgia, serif;
   color: #4a3a28;
+  margin-left: 10px; /* Margin on the left */
+  margin-right: 10px; /* Margin on the right */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
 }
 
 #projects h2 {
@@ -661,6 +663,7 @@ body {
   }
 }
 
+
 /* =======================
    JOB EXPERIENCE SECTION
 ======================= */
@@ -670,6 +673,9 @@ body {
   padding: 4rem 3%;
   font-family: Georgia, serif;
   color: #4a3a28;
+  margin-left: 10px; /* Margin on the left */
+  margin-right: 10px; /* Margin on the right */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
 }
 
 #job-experience h2 {
@@ -769,9 +775,6 @@ body {
   }
 }
 
-/* =======================
-   CONTACTS SECTION
-======================= */
 #contacts {
   width: 100%;
   background-color: #ebe1cd;
