@@ -489,6 +489,9 @@ body {
   padding: 4rem 3%;
   color: #4a3a28;
   font-family: Georgia, serif;
+  margin-left: 10px; /* Margin on the left */
+  margin-right: 10px; /* Margin on the right */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
 }
 
 #trainings h2 {
@@ -582,6 +585,7 @@ body {
     align-items: center;
   }
 }
+
 
 /* =======================
    PROJECTS SECTION
