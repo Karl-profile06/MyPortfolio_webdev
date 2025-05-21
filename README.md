@@ -11,5 +11,5 @@ When I click on a navigation link (.navbar a), the page scrolls smoothly to the 
 When a section becomes visible on the screen while scrolling, it gets a hovered class. I did this by checking which section is currently in view during every scroll. The script adds the hovered class to the visible section and removes it from the others. This effect is triggered by the scroll event on the window.
 
 3. Initial Hover Detection on Page Load
-4. 
+   
 When the page loads, it automatically checks which section is already in view and highlights it by adding the hovered class. This is done by calling the addHoverEffect() function as soon as the DOMContentLoaded event fires.
