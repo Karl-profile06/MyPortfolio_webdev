@@ -1,23 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll('.navbar a');
   const sections = document.querySelectorAll('section');
+  const backToTop = document.createElement('button');
 
-  // Smooth scrolling to target section
+  // Create Back to Top button
+  backToTop.textContent = "↑ Top";
+  backToTop.id = "backToTop";
+  backToTop.style.cssText = `
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: none;
+    z-index: 999;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  `;
+  document.body.appendChild(backToTop);
+
+  // Smooth scroll
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent the default anchor behavior
+      e.preventDefault();
       const targetId = link.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        // Perform smooth scrolling to the target section
         const start = window.pageYOffset;
         const end = targetSection.offsetTop;
         const distance = end - start;
-        const duration = 800; // Duration for the scroll (in ms)
+        const duration = 800;
         let startTime = null;
 
-        // Easing function for smooth scroll
         function ease(t, b, c, d) {
           t /= d / 2;
           if (t < 1) return c / 2 * t * t + b;
@@ -30,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
           const timeElapsed = currentTime - startTime;
           const run = ease(timeElapsed, start, distance, duration);
           window.scrollTo(0, run);
-
           if (timeElapsed < duration) {
             requestAnimationFrame(scrollAnimation);
           }
@@ -41,29 +58,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Add hover effect on the section once it is in view
-  function addHoverEffect() {
-    const scrollPos = window.scrollY + 120; // Adjust for better detection
+  // Handle scroll-related effects
+  function handleScrollEffects() {
+    const scrollPos = window.scrollY + 120;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
 
-      if (
-        sectionTop <= scrollPos &&
-        (sectionTop + sectionHeight) > scrollPos
-      ) {
-        // Add hover effect to the section when it's in view
-        section.classList.add('hovered'); // Add hovered class when section is in view
+      // Hover effect
+      if (sectionTop <= scrollPos && sectionTop + sectionHeight > scrollPos) {
+        section.classList.add('hovered');
       } else {
-        section.classList.remove('hovered'); // Remove hover effect when section is out of view
+        section.classList.remove('hovered');
       }
+
+      // Fade-in animation
+      if (scrollPos > sectionTop - window.innerHeight + 100) {
+        section.classList.add('visible');
+      }
+
+      // Highlight nav link
+      navLinks.forEach(link => {
+        const targetId = link.getAttribute('href').substring(1);
+        if (targetId === section.id) {
+          if (sectionTop <= scrollPos && sectionTop + sectionHeight > scrollPos) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Show/hide Back to Top button
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  }
+
+  // Back to Top button click
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Optional: Dark Mode Toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
     });
   }
 
-  // Listen for scroll events to add/remove hover effect
-  window.addEventListener('scroll', addHoverEffect);
-
-  // Initial check for hovered section on page load
-  addHoverEffect();
+  // Initial and scroll event listener
+  window.addEventListener('scroll', handleScrollEffects);
+  handleScrollEffects(); // Initial check
 });
