@@ -117,3 +117,45 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', handleScrollEffects);
   handleScrollEffects(); // Initial check
 });
+
+link.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // Remove active class from all links
+  navLinks.forEach(nav => nav.classList.remove('active'));
+  
+  // Add active class to clicked link
+  link.classList.add('active');
+
+  // Scroll animation (unchanged)
+  const targetId = link.getAttribute('href').substring(1);
+  const targetSection = document.getElementById(targetId);
+
+  if (targetSection) {
+    const start = window.pageYOffset;
+    const end = targetSection.offsetTop;
+    const distance = end - start;
+    const duration = 800;
+    let startTime = null;
+
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t -= 2;
+      return c / 2 * (t * t * t + 2) + b;
+    }
+
+    function scrollAnimation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, start, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    requestAnimationFrame(scrollAnimation);
+  }
+});
+
