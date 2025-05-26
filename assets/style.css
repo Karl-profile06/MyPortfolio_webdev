@@ -903,7 +903,6 @@ section:hover {
   font-size: 1rem;
   padding-bottom: 3px;
   transition: color 0.3s ease;
-  transition: 0.3s ease-in-out;
 
 /* Hover effect for navbar links */
 .navbar ul li a:hover,
@@ -925,14 +924,14 @@ section:hover {
   background: #000;
   bottom: -4px;
   left: 0;
-  animation: underline-slide 0.3s ease-in-out forwards;
+  animation: underline-slide 0.4s ease-in-out forwards;
 }
 
 .navbar a.active {
   font-weight: bold;
   color: #7a654a;
   position: relative;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .navbar a.active::after {
@@ -943,7 +942,7 @@ section:hover {
   background: #7a654a;
   bottom: -4px;
   left: 0;
-  animation: underline-slide 0.3s ease-in-out forwards;
+  animation: underline-slide 0.4s ease-in-out forwards;
 }
 
 @keyframes underline-slide {
