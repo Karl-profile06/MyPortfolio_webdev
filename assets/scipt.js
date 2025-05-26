@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle scroll-related effects
   function handleScrollEffects() {
     const scrollPos = window.scrollY + 120;
+    const isBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -77,18 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
       if (scrollPos > sectionTop - window.innerHeight + 100) {
         section.classList.add('visible');
       }
+    });
 
-      // Highlight nav link
-      navLinks.forEach(link => {
-        const targetId = link.getAttribute('href').substring(1);
-        if (targetId === section.id) {
-          if (sectionTop <= scrollPos && sectionTop + sectionHeight > scrollPos) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        }
-      });
+    // Update nav link highlighting
+    navLinks.forEach(link => {
+      const targetId = link.getAttribute('href').substring(1);
+      const section = document.getElementById(targetId);
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (isBottom && targetId === 'contacts') {
+        link.classList.add('active');
+      } else if (sectionTop <= scrollPos && sectionTop + sectionHeight > scrollPos) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     });
 
     // Show/hide Back to Top button
@@ -112,27 +117,3 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', handleScrollEffects);
   handleScrollEffects(); // Initial check
 });
-
-// Highlight nav link with bold + animation
-navLinks.forEach(link => {
-  const targetId = link.getAttribute('href').substring(1);
-  if (targetId === section.id) {
-    if (sectionTop <= scrollPos && sectionTop + sectionHeight > scrollPos) {
-      link.classList.add('active'); // Add active
-    } else {
-      link.classList.remove('active');
-    }
-  }
-});
-
-// Detect bottom of page and highlight "Contacts"
-const isBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
-if (isBottom) {
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#contacts') {
-      link.classList.add('active');
-    }
-  });
-}
-
