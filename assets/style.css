@@ -910,7 +910,6 @@ section:hover {
 .navbar ul li a:hover,
 .navbar ul li a:focus {
   color: #7a654a; /* Change text color */
-  border-bottom-color: #7a654a; /* Underline the text */
 }
 
 .navbar a.active {
