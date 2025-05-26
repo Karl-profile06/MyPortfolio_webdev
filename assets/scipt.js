@@ -159,3 +159,8 @@ link.addEventListener('click', (e) => {
   }
 });
 
+// Inside your navLinks click event
+navLinks.forEach(nav => nav.classList.remove('active'));
+link.classList.add('active');
+
+
