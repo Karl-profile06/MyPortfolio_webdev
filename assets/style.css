@@ -902,7 +902,6 @@ section:hover {
   font-weight: normal;
   font-size: 1rem;
   padding-bottom: 3px;
-  border-bottom: 1px solid transparent;
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
