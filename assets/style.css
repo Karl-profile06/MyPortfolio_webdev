@@ -903,6 +903,7 @@ section:hover {
   font-size: 1rem;
   padding-bottom: 3px;
   transition: color 0.3s ease;
+  transition: 0.3s ease-in-out;
 
 /* Hover effect for navbar links */
 .navbar ul li a:hover,
