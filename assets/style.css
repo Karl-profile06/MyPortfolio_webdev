@@ -427,8 +427,8 @@ body {
 }
 
 .school-logo {
-  width: 150px; /* Reduce size of the image */
-  height: 150px; /* Maintain aspect ratio */
+  width: 200px; /* Reduce size of the image */
+  height: 200px; /* Maintain aspect ratio */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(80, 65, 35, 0.2);
@@ -535,8 +535,8 @@ body {
 }
 
 #trainings .school-logo {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(80, 65, 35, 0.15);
@@ -715,8 +715,8 @@ body {
 }
 
 .job-photo {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(80, 65, 35, 0.15);
