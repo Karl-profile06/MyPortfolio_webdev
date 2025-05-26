@@ -112,3 +112,27 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', handleScrollEffects);
   handleScrollEffects(); // Initial check
 });
+
+// Highlight nav link with bold + animation
+navLinks.forEach(link => {
+  const targetId = link.getAttribute('href').substring(1);
+  if (targetId === section.id) {
+    if (sectionTop <= scrollPos && sectionTop + sectionHeight > scrollPos) {
+      link.classList.add('active'); // Add active
+    } else {
+      link.classList.remove('active');
+    }
+  }
+});
+
+// Detect bottom of page and highlight "Contacts"
+const isBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
+if (isBottom) {
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#contacts') {
+      link.classList.add('active');
+    }
+  });
+}
+
